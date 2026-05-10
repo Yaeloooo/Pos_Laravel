@@ -7,22 +7,26 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
-        <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+    <body class="font-sans text-gray-900 antialiased bg-gradient-to-br from-indigo-50 via-white to-indigo-50 min-h-screen">
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0">
             <div>
                 <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                    <x-application-logo class="w-20 h-20 fill-current text-indigo-600 rounded-2xl transform rotate-45 border-4 border-indigo-200 p-2 shadow-lg" />
                 </a>
             </div>
 
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
+            <div class="w-full sm:max-w-md mt-10 px-10 py-8 bg-white/40 backdrop-blur-xl shadow-2xl border border-white/20 overflow-hidden sm:rounded-3xl transition-all duration-300">
+
+                <div class="mb-8 text-center">
+                    <h2 class="text-3xl font-extrabold text-gray-900 tracking-tight">Bienvenido</h2>
+                    <p class="text-sm text-gray-600 mt-2">Ingresa tus credenciales para StockMaster Pro</p>
+                </div>
+
                 {{ $slot }}
             </div>
         </div>
