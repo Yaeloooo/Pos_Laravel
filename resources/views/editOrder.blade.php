@@ -13,6 +13,7 @@
             @csrf
             @method('PUT')
 
+
             <tbody>
                 <tr>
                     <td><input type="text" name="name" value="{{ $order->cliente->name ?? 'N/A' }}"></td>
@@ -32,10 +33,17 @@
                     <td><input type="text" name="quantity" value="{{ $order->quantity }}"></td>
                     <td>${{ $order->total }}</td>
                     <td><button type="submit">Actualizar</button></td>
+
+                    </form>
+
+                    <form action="/order/{{$order->id}}/delete" method="post">
+                        @csrf
+                        @method('DELETE')
+                         <td><button type="submit">Eliminar</button></td>
+                    </form>
+
                 </tr>
 
             </tbody>
-
-        </form>
-
     </table>
+

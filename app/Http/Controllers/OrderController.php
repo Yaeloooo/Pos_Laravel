@@ -93,7 +93,6 @@ class OrderController extends Controller
          $products = Product::all();
 
 
-
          return view('editOrder',compact('order','products'));
 
     }
@@ -142,6 +141,11 @@ class OrderController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $order = Order::find($id);
+        $order->delete();
+        return redirect('/add-product');
+
+
+
     }
 }

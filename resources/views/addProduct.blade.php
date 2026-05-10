@@ -1,3 +1,6 @@
+
+<x-app-layout>
+
 <h1>StockMaster Pro</h1>
 <p>Fecha: {{ date('d M, Y') }}</p>
 
@@ -116,3 +119,7 @@
     </table>
 </div>
 
+
+
+
+</x-app-layout>

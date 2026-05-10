@@ -58,7 +58,7 @@ class ProductController extends Controller
     public function edit(string $id)
     {
 
-        
+
         //
     }
 
@@ -75,6 +75,7 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+
+        
     }
 }
